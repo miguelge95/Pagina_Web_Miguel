@@ -3,24 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venta de productos Natura - Avón</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Belleza y bienestar con Natura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Montserrat', sans-serif; margin:0; background:#fff; color:#333; }
+    body { font-family: 'Open Sans', sans-serif; margin:0; background:#fff; color:#333; }
     header { background:#2e7d32; color:#fff; padding:20px; text-align:center; }
     nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; transition: color 0.3s ease; }
     nav a:hover { color:#c5a46d; }
-    .hero { background:url('tu-imagen-principal.jpg') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:2em; text-shadow:2px 2px 5px rgba(0,0,0,0.5); }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
-    .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+    .hero {
+      background:url('tu-imagen-principal.jpg') center/cover no-repeat;
+      height:450px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .hero .overlay {
+      background:rgba(0,0,0,0.5);
+      padding:30px;
+      border-radius:12px;
+      color:#fff;
+    }
+    .hero h1 {
+      font-family:'Montserrat', sans-serif;
+      font-size:2.8em;
+      margin-bottom:15px;
+      color:#c5a46d; /* dorado suave */
+    }
+    .hero h2 {
+      font-size:1.4em;
+      font-weight:400;
+    }
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:40px;
+    }
+    .card {
+      border:1px solid #ddd;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
     .card img { width:100%; display:block; }
-    .card h3 { margin:10px; color:#2e7d32; }
+    .card h3 { margin:10px; color:#2e7d32; font-family:'Montserrat', sans-serif; }
     .card p { margin:10px; font-size:0.9em; color:#555; }
-    .card button { margin:10px; padding:10px; background:#f06292; color:#fff; border:none; border-radius:5px; cursor:pointer; transition: background 0.3s ease; }
+    .card button {
+      margin:10px;
+      padding:10px;
+      background:#2e7d32;
+      color:#fff;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      transition: background 0.3s ease;
+    }
     .card button:hover { background:#c5a46d; }
-    footer { background:#f1f1f1; text-align:center; padding:20px; margin-top:40px; }
-    footer a { margin:0 10px; color:#2e7d32; text-decoration:none; }
+    footer {
+      background:#2e7d32;
+      color:#fff;
+      padding:20px;
+      text-align:center;
+    }
+    footer a {
+      color:#c5a46d;
+      margin:0 10px;
+      text-decoration:none;
+    }
     footer a:hover { color:#f06292; }
     /* Animación fade-in */
     .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
@@ -29,109 +85,45 @@
 </head>
 <body>
   <header>
-    <h1>Venta de productos Natura - Avón</h1>
+    <h1>Blog Natura Miguel</h1>
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Productos</a>
-    <!--  <a href="#">Blog</a> -->
+      <a href="#">Blog</a>
       <a href="#">Contacto</a>
     </nav>
   </header>
   <section class="hero">
-  <div class="overlay">
-    <h1>Belleza y bienestar con Natura</h1>
-    <h2>Descubre productos que realzan tu belleza natural</h2>
-  </div>
-</section>
+    <div class="overlay">
+      <h1>Belleza y bienestar con Natura</h1>
+      <h2>Productos que realzan tu belleza natural</h2>
+    </div>
+  </section>
   <section class="gallery">
     <div class="card fade-in">
-      <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
-      <h3>Perfume Humor</h3>
-      <p>Descripción del producto </p>
-      <p>• Notas cítricas y un vibrante cóctel de frutas</p>
-      <p>• Un toque irresistible de frozen de pera</p>
-      <p>• Fragancia de la alegría, irreverente y audaz</p>
-      <p>• Salida: pera, cassis, bergamota, naranja</p>
-      <p>• Corazón: jazmín, lirio del valle, flor de macadamia</p>
-      <p>• Fondo: almizcle, ámbar, sándalo </p>
-      <!-- <button>Ver más</button> -->
+      <img src="Natura - Crema 400 ml.jpeg" alt="Crema Natura 400 ml">
+      <h3>Crema Corporal 400 ml</h3>
+      <p>Hidratación profunda con ingredientes naturales.</p>
+      <button>Ver más</button>
     </div>
     <div class="card fade-in">
-      <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
-      <h3>Perfume Kaiak</h3>
-      <p>Descripción del producto:</p>
-      <p>• Familia olfativa: aromática</p>
-      <p>• Notas de salida: bergamota, mandarina, agujas de pino</p>
-      <p>• Notas de corazón: dihidromircenol, muguete, maderas transparentes</p>
-      <p>• Notas de fondo: musk, musgo de roble, sándalo</p>
-      <!-- <button>Ver más</button> -->
+      <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor Dama">
+      <h3>Perfume Humor Dama</h3>
+      <p>Fragancia fresca y elegante para cada ocasión.</p>
+      <button>Ver más</button>
     </div>
     <div class="card fade-in">
-      <img src="Natura - Crema 400 ml.jpeg" alt="Maracuya">
-      <h3>Néctar para cuerpo Maracuya</h3>
-      <p>Descripción breve del producto:</p>
-      <p>• reequilibra la piel y combate el estrés cutáneo </p>
-      <p>• 97% de origen natural y fórmula biocompatible </p>
-      <p>• deja la piel reequilibrada, suave y tersa</p>
-      <p>• decimos no a los tests en animales, parabenos, siliconas y aceite mineral</p>
-       </div>
-    <div class="card fade-in">
-      <img src="Delineador.jpeg" alt="Delineador">
-      <h3>Mascarilla de pestañas y Labiales</h3>
-      <p>Descripción de los productos</p>
-      <p>Labial líquido Rojo </p>
-      <p>Mascarilla resistente al agua </p>   
-    </div>
-    <div class="card fade-in">
-      <img src=" desodorante roll on.jpeg" alt="Desodorante roll on">
-      <h3>Desodorante Roll On</h3>
-      <p>Descripción del producto: </p>
-      <p>• Alta protección por hasta 72 horas</p>
-      <p>• Cuida la piel con activos naturales</p>
-      <p>• Tecnología invisible que no mancha la ropa clara y oscura</p>
-      <p>• Bioinnovación: combina lo mejor de la ciencia y de la naturaleza</p>
-    </div>
-    <div class="card fade-in">
-      <img src=" manos.png" alt="manos">
-      <h3>Crema de manos</h3>
-      <p>Descripción del producto: </p>
-      <p>Takuma</p>
-      <p>Castaña</p>
-      <p>• Promueve nutrición intensa</p>
-      <p>• Hidrata inmediatamente</p>
-      <p>• para cuidar de pies resecos y grietas en los pies</p>
-      <p>• Tecnología invisible que no mancha la ropa clara y oscura</p>
-      <p>• Bioinnovación: combina lo mejor de la ciencia y de la naturaleza</p>
-    </div>
-    <div class="card fade-in">
-      <img src=" rep-shampoo.jpeg" alt="rep-shampoo">
-      <h3>Repuesto de Shampoo</h3>
-      <p>Descripción del producto: </p>
-      <p>Versión repuesto más sostenible y económica</p>
-      <p>Cuida tu cabello con Tecnología Prebiótica</p>
-      <p> limpieza en la medida justa, sin sulfato y con fórmula hidratante que evita la formación de nuevos nudos</p>
-    </div>
-    <div class="card fade-in">
-      <img src=" rep-crema.jpeg" alt="rep-crema">
-      <h3>Repuesto de Crema </h3>
-      <p>Descripción del producto: </p>
-      <p>Ayuda a renovar la barrera cutánea</p>
-      <p>Piel profundamente hidratada y nutrida</p>
-    </div>
-    <div class="card fade-in">
-      <img src=" acondicionador.jpeg" alt="acondicionador">
-      <h3>Acondicionador</h3>
-      <p>Descripción del producto: </p>
-      <p>• Recupera el cabello del desgaste diario </p>
-      <p>• Tecnología prebiótica que cuida desde la raíz hasta las puntas</p>
-      <p>• Fórmula con 97% de ingredientes de origen natural</p>
+      <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Humor 2 Dama">
+      <h3>Perfume Humor 2 Dama</h3>
+      <p>Notas vibrantes que reflejan tu personalidad.</p>
+      <button>Ver más</button>
     </div>
   </section>
   <footer>
-    <p>© 2026 Blog Natura Miguel | Contactanos vía WhatsApp 5547909105 </p>
-  <!--  <a href="#">Facebook</a>
+    <p>© 2026 Blog Natura Miguel | Síguenos en redes sociales</p>
+    <a href="#">Facebook</a>
     <a href="#">Instagram</a>
-    <a href="#">WhatsApp</a> -->
+    <a href="#">WhatsApp</a>
   </footer>
   <script>
     // Animación al hacer scroll
