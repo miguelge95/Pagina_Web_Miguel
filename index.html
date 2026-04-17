@@ -7,14 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Montserrat', sans-serif; margin:0; background:#fff; color:#333; }
-    header { background:#031926; color:#fff; padding:20px; text-align:center; position:sticky; top:0; z-index:1000; }
+    header { background:#031926; color:#fff; padding:20px; text-align:center; }
     nav { margin-top:10px; }
     nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; transition: color 0.3s ease; }
     nav a:hover { color:#f06292; }
     h2 { text-align:center; color:#031926; margin-top:40px; }
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
-    .card { border:1px solid #ddd; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
-    .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.25); }
+    .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
+    .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+    /* 🔹 Ajuste de imágenes */
     .card img { 
       width: 100%;
       max-width: 250px;
@@ -22,13 +24,16 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      border-radius: 8px;
       object-fit: contain;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
     }
+
     @media (max-width: 600px) {
-      .card img { max-width: 100%; max-height: none; }
+      .card img {
+        max-width: 100%;
+        max-height: none;
+      }
     }
+
     .card h3 { margin:10px; color:#2e7d32; }
     .card p { margin:10px; font-size:0.9em; color:#555; }
     footer { background:#031926; color:#fff; text-align:center; padding:20px; margin-top:40px; }
@@ -36,31 +41,6 @@
     footer a:hover { color:#f06292; }
     .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
-
-    /* 🔹 Botón flotante de WhatsApp */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.3s ease;
-    }
-    .whatsapp-btn:hover { background:#128C7E; }
-    
-    /* 🔹 Sección destacados */
-    .destacados {
-      background:#f9f9f9;
-      padding:30px;
-      text-align:center;
-      border-bottom:2px solid #ddd;
-    }
-    .destacados h2 { color:#c5a46d; }
   </style>
 </head>
 <body>
@@ -77,12 +57,6 @@
       <a href="#labiales">Labiales y Máscaras</a>
     </nav>
   </header>
-
-  <!-- DESTACADOS -->
-  <section class="destacados">
-    <h2>🌟 Ofertas de la Semana</h2>
-    <p>Descubre nuestros productos más vendidos y promociones exclusivas.</p>
-  </section>
 
   <!-- PERFUMES -->
   <section id="perfumes">
@@ -176,4 +150,27 @@
     <h2>Labiales y Máscaras</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="Delineador.jpeg" alt="Lab
+        <img src="Delineador.jpeg" alt="Labial y máscara">
+        <h3>Labial Rojo y Máscara</h3>
+        <p>Resistente al agua y de larga duración</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Store´s Mike | Si te interesa algún producto, escríbenos directamente por WhatsApp: 55-47-90-91-05 / 55-63-71-92-38</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          card.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
