@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Natura Miguel | Belleza y Bienestar</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <style>
     body { font-family: 'Montserrat', sans-serif; margin:0; background:#fff; color:#333; }
     header { background:#031926; color:#fff; padding:20px; text-align:center; }
@@ -17,7 +15,12 @@
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
     .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-    .card img { width:100%; height:200px; object-fit:cover; display:block; }
+    .card img {
+      width: 100%;
+      height: 200px;       /* altura fija para reducir tamaño */
+      object-fit: cover;   /* recorta manteniendo proporción */
+      display: block;
+    }
     .card h3 { margin:10px; color:#2e7d32; }
     .card p { margin:10px; font-size:0.9em; color:#555; }
     footer { background:#031926; color:#fff; text-align:center; padding:20px; margin-top:40px; }
@@ -47,16 +50,12 @@
     <h2>Perfumes</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <a href="HumorDama.jpeg" data-lightbox="perfumes" data-title="Perfume Humor">
-          <img src="HumorDama.jpeg" alt="Perfume Humor">
-        </a>
+        <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
         <h3>Perfume Humor</h3>
         <p>Notas cítricas y un vibrante cóctel de frutas</p>
       </div>
       <div class="card fade-in">
-        <a href="Natura - Humor 2 - Dama.jpeg" data-lightbox="perfumes" data-title="Perfume Kaiak">
-          <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
-        </a>
+        <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
         <h3>Perfume Kaiak</h3>
         <p>Familia olfativa: aromática</p>
       </div>
@@ -68,9 +67,7 @@
     <h2>Desodorantes</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <a href="desodorante roll on.jpeg" data-lightbox="desodorantes" data-title="Desodorante Roll On">
-          <img src="desodorante roll on.jpeg" alt="Desodorante Roll On">
-        </a>
+        <img src="desodorante roll on.jpeg" alt="Desodorante Roll On">
         <h3>Desodorante Roll On</h3>
         <p>Alta protección por hasta 72 horas</p>
       </div>
@@ -82,82 +79,10 @@
     <h2>Cremas</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <a href="Natura - Crema 400 ml.jpeg" data-lightbox="cremas" data-title="Néctar para cuerpo Maracuya">
-          <img src="Natura - Crema 400 ml.jpeg" alt="Néctar Maracuya">
-        </a>
+        <img src="Natura - Crema 400 ml.jpeg" alt="Néctar Maracuya">
         <h3>Néctar para cuerpo Maracuya</h3>
         <p>97% de origen natural y fórmula biocompatible</p>
       </div>
       <div class="card fade-in">
-        <a href="rep-crema.jpeg" data-lightbox="cremas" data-title="Repuesto de Crema">
-          <img src="rep-crema.jpeg" alt="Repuesto Crema">
-        </a>
-        <h3>Repuesto de Crema</h3>
-        <p>Hidratación profunda y renovación cutánea</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CREMAS PARA MANOS -->
-  <section id="manos">
-    <h2>Cremas para Manos</h2>
-    <div class="gallery">
-      <div class="card fade-in">
-        <a href="manos.png" data-lightbox="manos" data-title="Crema de manos">
-          <img src="manos.png" alt="Crema de manos">
-        </a>
-        <h3>Crema de manos</h3>
-        <p>Nutrición intensa e hidratación inmediata</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- JABONES -->
-  <section id="jabones">
-    <h2>Jabones en barra / Líquidos</h2>
-    <div class="gallery">
-      <div class="card fade-in">
-        <a href="jabones.jpeg" data-lightbox="jabones" data-title="Jabones Natura">
-          <img src="jabones.jpeg" alt="Jabones Natura">
-        </a>
-        <h3>Jabones Natura</h3>
-        <p>Fórmulas suaves y biodegradables</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SHAMPOO / ACONDICIONADOR -->
-  <section id="shampoo">
-    <h2>Shampoo / Acondicionador</h2>
-    <div class="gallery">
-      <div class="card fade-in">
-        <a href="rep-shampoo.jpeg" data-lightbox="shampoo" data-title="Repuesto Shampoo">
-          <img src="rep-shampoo.jpeg" alt="Repuesto Shampoo">
-        </a>
-        <h3>Repuesto de Shampoo</h3>
-        <p>Versión sostenible y económica</p>
-      </div>
-      <div class="card fade-in">
-        <a href="acondicionador.jpeg" data-lightbox="shampoo" data-title="Acondicionador">
-          <img src="acondicionador.jpeg" alt="Acondicionador">
-        </a>
-        <h3>Acondicionador</h3>
-        <p>Recupera el cabello del desgaste diario</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LABIALES Y MÁSCARAS -->
-  <section id="labiales">
-    <h2>Labiales y Máscaras de Pestañas</h2>
-    <div class="gallery">
-      <div class="card fade-in">
-        <a href="Delineador.jpeg" data-lightbox="labiales" data-title="Labial Rojo y Máscara">
-          <img src="Delineador.jpeg" alt="Labial y máscara">
-        </a>
-        <h3>Labial Rojo y Máscara</h3>
-        <p>Resistente al agua y de larga duración</p>
-      </div>
-    </div>
-  </section>
-
+        <img src="rep-crema.jpeg" alt="Repuesto Crema">
+        <h3>Repuesto
