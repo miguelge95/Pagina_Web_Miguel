@@ -15,6 +15,7 @@
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
     .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+    .card img { width:100%; display:block; }
     .card h3 { margin:10px; color:#2e7d32; }
     .card p { margin:10px; font-size:0.9em; color:#555; }
     footer { background:#031926; color:#fff; text-align:center; padding:20px; margin-top:40px; }
@@ -22,11 +23,6 @@
     footer a:hover { color:#f06292; }
     .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
-
-    /* Clases para ajustar tamaño de imágenes */
-    .img-small { width:100%; height:150px; object-fit:cover; display:block; }
-    .img-medium { width:100%; height:200px; object-fit:cover; display:block; }
-    .img-large { width:100%; height:250px; object-fit:cover; display:block; }
   </style>
 </head>
 <body>
@@ -49,12 +45,12 @@
     <h2>Perfumes</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor" class="img-medium">
+        <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
         <h3>Perfume Humor</h3>
         <p>Notas cítricas y un vibrante cóctel de frutas</p>
       </div>
       <div class="card fade-in">
-        <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak" class="img-small">
+        <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
         <h3>Perfume Kaiak</h3>
         <p>Familia olfativa: aromática</p>
       </div>
@@ -66,7 +62,7 @@
     <h2>Desodorantes</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="desodorante roll on.jpeg" alt="Desodorante Roll On" class="img-medium">
+        <img src="desodorante roll on.jpeg" alt="Desodorante Roll On">
         <h3>Desodorante Roll On</h3>
         <p>Alta protección por hasta 72 horas</p>
       </div>
@@ -78,12 +74,12 @@
     <h2>Cremas</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="Natura - Crema 400 ml.jpeg" alt="Néctar Maracuya" class="img-large">
+        <img src="Natura - Crema 400 ml.jpeg" alt="Néctar Maracuya">
         <h3>Néctar para cuerpo Maracuya</h3>
         <p>97% de origen natural y fórmula biocompatible</p>
       </div>
       <div class="card fade-in">
-        <img src="rep-crema.jpeg" alt="Repuesto Crema" class="img-medium">
+        <img src="rep-crema.jpeg" alt="Repuesto Crema">
         <h3>Repuesto de Crema</h3>
         <p>Hidratación profunda y renovación cutánea</p>
       </div>
@@ -95,7 +91,7 @@
     <h2>Cremas para Manos</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="manos.png" alt="Crema de manos" class="img-small">
+        <img src="manos.png" alt="Crema de manos">
         <h3>Crema de manos</h3>
         <p>Nutrición intensa e hidratación inmediata</p>
       </div>
@@ -107,7 +103,7 @@
     <h2>Jabones en barra / Líquidos</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="jabones.jpeg" alt="Jabones Natura" class="img-medium">
+        <img src="jabones.jpeg" alt="Jabones Natura">
         <h3>Jabones Natura</h3>
         <p>Fórmulas suaves y biodegradables</p>
       </div>
@@ -119,12 +115,12 @@
     <h2>Shampoo / Acondicionador</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="rep-shampoo.jpeg" alt="Repuesto Shampoo" class="img-medium">
+        <img src="rep-shampoo.jpeg" alt="Repuesto Shampoo">
         <h3>Repuesto de Shampoo</h3>
         <p>Versión sostenible y económica</p>
       </div>
       <div class="card fade-in">
-        <img src="acondicionador.jpeg" alt="Acondicionador" class="img-large">
+        <img src="acondicionador.jpeg" alt="Acondicionador">
         <h3>Acondicionador</h3>
         <p>Recupera el cabello del desgaste diario</p>
       </div>
@@ -136,7 +132,7 @@
     <h2>Labiales y Máscaras de Pestañas</h2>
     <div class="gallery">
       <div class="card fade-in">
-        <img src="Delineador.jpeg" alt="Labial y máscara" class="img-small">
+        <img src="Delineador.jpeg" alt="Labial y máscara">
         <h3>Labial Rojo y Máscara</h3>
         <p>Resistente al agua y de larga duración</p>
       </div>
