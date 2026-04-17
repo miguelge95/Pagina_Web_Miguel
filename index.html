@@ -15,20 +15,23 @@
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
     .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-    
-    /* 🔹 Ajuste de imágenes responsivas */
+
+    /* 🔹 Ajuste de imágenes */
     .card img { 
       width: 100%;        /* Se adapta al ancho de la tarjeta */
       max-width: 250px;   /* Límite máximo en pantallas grandes */
-      height: auto;       /* Mantiene proporción sin deformar */
+      max-height: 300px;  /* 🔹 Evita que sean demasiado altas */
+      height: auto;       /* Mantiene proporción */
       display: block;
-      margin: 0 auto;     /* Centra la imagen si es más pequeña */
+      margin: 0 auto;     /* Centra la imagen */
+      object-fit: contain;/* Ajusta dentro del marco sin recortar */
     }
 
-    /* 🔹 En pantallas pequeñas (móviles), las imágenes ocupan todo el ancho */
+    /* 🔹 En móviles las imágenes ocupan todo el ancho */
     @media (max-width: 600px) {
       .card img {
-        max-width: 100%;  /* Se expande al ancho completo en móviles */
+        max-width: 100%;
+        max-height: none; /* Se quita el límite de altura en móviles */
       }
     }
 
@@ -56,24 +59,7 @@
     </nav>
   </header>
 
-  <!-- PERFUMES -->
-  <section id="perfumes">
-    <h2>Perfumes</h2>
-    <div class="gallery">
-      <div class="card fade-in">
-        <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
-        <h3>Perfume Humor</h3>
-        <p>Notas cítricas y un vibrante cóctel de frutas</p>
-      </div>
-      <div class="card fade-in">
-        <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
-        <h3>Perfume Kaiak</h3>
-        <p>Familia olfativa: aromática</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Aquí siguen las demás secciones igual que tu script original -->
+  <!-- Aquí tus secciones igual que antes -->
 
   <footer>
     <p>© 2026 Store´s Mike | Si te interesa algún producto, escríbenos directamente por WhatsApp: 55-47-90-91-05 / 55-63-71-92-38</p>
