@@ -8,28 +8,29 @@
   <style>
     body { font-family: 'Montserrat', sans-serif; margin:0; background:#fff; color:#333; }
     header { background:#031926; color:#fff; padding:20px; text-align:center; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; transition: color 0.3s ease; }
+    nav { margin-top:10px; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; transition: color 0.3s ease; }
     nav a:hover { color:#f06292; }
+    h2 { text-align:center; color:#031926; margin-top:40px; }
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; }
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
     .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
 
     /* 🔹 Ajuste de imágenes */
     .card img { 
-      width: 100%;        /* Se adapta al ancho de la tarjeta */
-      max-width: 250px;   /* Límite máximo en pantallas grandes */
-      max-height: 300px;  /* Evita que sean demasiado altas */
-      height: auto;       /* Mantiene proporción */
+      width: 100%;
+      max-width: 250px;
+      max-height: 300px;
+      height: auto;
       display: block;
-      margin: 0 auto;     /* Centra la imagen */
-      object-fit: contain;/* Ajusta dentro del marco sin recortar */
+      margin: 0 auto;
+      object-fit: contain;
     }
 
-    /* 🔹 En móviles las imágenes ocupan todo el ancho */
     @media (max-width: 600px) {
       .card img {
         max-width: 100%;
-        max-height: none; /* Se quita el límite de altura en móviles */
+        max-height: none;
       }
     }
 
@@ -44,60 +45,115 @@
 </head>
 <body>
   <header>
-      <h1>Descubre tu esencia con Natura</h1>
-      <h2>Productos que realzan tu belleza natural</h2>
+    <h1>Descubre tu esencia con Natura</h1>
+    <h2>Productos que realzan tu belleza natural</h2>
+    <nav>
+      <a href="#perfumes">Perfumes</a> |
+      <a href="#desodorantes">Desodorantes</a> |
+      <a href="#cremas">Cremas</a> |
+      <a href="#manos">Cremas para Manos</a> |
+      <a href="#jabones">Jabones</a> |
+      <a href="#shampoo">Shampoo / Acondicionador</a> |
+      <a href="#labiales">Labiales y Máscaras</a>
+    </nav>
   </header>
 
-  <section class="gallery">
-    <div class="card fade-in">
-      <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
-      <h3>Perfume Humor</h3>
-      <p>Notas cítricas y un vibrante cóctel de frutas</p>
+  <!-- PERFUMES -->
+  <section id="perfumes">
+    <h2>Perfumes</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="Natura - Humor - Dama.jpeg" alt="Perfume Humor">
+        <h3>Perfume Humor</h3>
+        <p>Notas cítricas y un vibrante cóctel de frutas</p>
+      </div>
+      <div class="card fade-in">
+        <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
+        <h3>Perfume Kaiak</h3>
+        <p>Familia olfativa: aromática</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="Natura - Humor 2 - Dama.jpeg" alt="Perfume Kaiak">
-      <h3>Perfume Kaiak</h3>
-      <p>Familia olfativa: aromática</p>
+  </section>
+
+  <!-- DESODORANTES -->
+  <section id="desodorantes">
+    <h2>Desodorantes</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="desodorante roll on.jpeg" alt="Desodorante Roll On">
+        <h3>Desodorante Roll On</h3>
+        <p>Alta protección por hasta 72 horas</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="Natura - Crema 400 ml.jpeg" alt="Maracuya">
-      <h3>Néctar para cuerpo Maracuya</h3>
-      <p>97% de origen natural y fórmula biocompatible</p>
+  </section>
+
+  <!-- CREMAS -->
+  <section id="cremas">
+    <h2>Cremas</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="Natura - Crema 400 ml.jpeg" alt="Maracuya">
+        <h3>Néctar para cuerpo Maracuya</h3>
+        <p>97% de origen natural y fórmula biocompatible</p>
+      </div>
+      <div class="card fade-in">
+        <img src="rep-crema.jpeg" alt="Repuesto Crema">
+        <h3>Repuesto de Crema</h3>
+        <p>Hidratación profunda y renovación cutánea</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="Delineador.jpeg" alt="Delineador">
-      <h3>Mascarilla de pestañas y Labiales</h3>
-      <p>Labial líquido Rojo</p>
+  </section>
+
+  <!-- CREMAS PARA MANOS -->
+  <section id="manos">
+    <h2>Cremas para Manos</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="manos.png" alt="Crema de manos">
+        <h3>Crema de manos</h3>
+        <p>Nutrición intensa e hidratación inmediata</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="desodorante roll on.jpeg" alt="Desodorante roll on">
-      <h3>Desodorante Roll On</h3>
-      <p>Alta protección por hasta 72 horas</p>
+  </section>
+
+  <!-- JABONES -->
+  <section id="jabones">
+    <h2>Jabones</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="jabones.jpeg" alt="Jabones Natura">
+        <h3>Jabones Natura</h3>
+        <p>Fórmulas suaves y biodegradables</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="manos.png" alt="manos">
-      <h3>Crema de manos</h3>
-      <p>Nutrición intensa e hidratación inmediata</p>
+  </section>
+
+  <!-- SHAMPOO / ACONDICIONADOR -->
+  <section id="shampoo">
+    <h2>Shampoo / Acondicionador</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="rep-shampoo.jpeg" alt="Repuesto Shampoo">
+        <h3>Repuesto de Shampoo</h3>
+        <p>Versión sostenible y económica</p>
+      </div>
+      <div class="card fade-in">
+        <img src="acondicionador.jpeg" alt="Acondicionador">
+        <h3>Acondicionador</h3>
+        <p>Recupera el cabello del desgaste diario</p>
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="rep-shampoo.jpeg" alt="rep-shampoo">
-      <h3>Repuesto de Shampoo</h3>
-      <p>Versión sostenible y económica</p>
-    </div>
-    <div class="card fade-in">
-      <img src="rep-crema.jpeg" alt="rep-crema">
-      <h3>Repuesto de Crema</h3>
-      <p>Hidratación profunda y renovación cutánea</p>
-    </div>
-    <div class="card fade-in">
-      <img src="acondicionador.jpeg" alt="acondicionador">
-      <h3>Acondicionador</h3>
-      <p>Recupera el cabello del desgaste diario</p>
-    </div>
-    <div class="card fade-in">
-      <img src="jabones.jpeg" alt="jabones">
-      <h3>Jabones Natura</h3>
-      <p>Fórmulas suaves y biodegradables</p>
+  </section>
+
+  <!-- LABIALES Y MÁSCARAS -->
+  <section id="labiales">
+    <h2>Labiales y Máscaras</h2>
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="Delineador.jpeg" alt="Labial y máscara">
+        <h3>Labial Rojo y Máscara</h3>
+        <p>Resistente al agua y de larga duración</p>
+      </div>
     </div>
   </section>
 
