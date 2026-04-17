@@ -16,12 +16,20 @@
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background:#fff; }
     .card:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
     
-    /* 🔹 Ajuste de imágenes */
+    /* 🔹 Ajuste de imágenes responsivas */
     .card img { 
-      max-width: 250px;   /* Cambia este valor para el ancho máximo */
+      width: 100%;        /* Se adapta al ancho de la tarjeta */
+      max-width: 250px;   /* Límite máximo en pantallas grandes */
       height: auto;       /* Mantiene proporción sin deformar */
       display: block;
-      margin: 0 auto;     /* Centra la imagen dentro de la tarjeta */
+      margin: 0 auto;     /* Centra la imagen si es más pequeña */
+    }
+
+    /* 🔹 En pantallas pequeñas (móviles), las imágenes ocupan todo el ancho */
+    @media (max-width: 600px) {
+      .card img {
+        max-width: 100%;  /* Se expande al ancho completo en móviles */
+      }
     }
 
     .card h3 { margin:10px; color:#2e7d32; }
@@ -48,7 +56,6 @@
     </nav>
   </header>
 
-  <!-- Aquí siguen tus secciones tal cual -->
   <!-- PERFUMES -->
   <section id="perfumes">
     <h2>Perfumes</h2>
@@ -66,7 +73,7 @@
     </div>
   </section>
 
-  <!-- resto de secciones igual que tu script original -->
+  <!-- Aquí siguen las demás secciones igual que tu script original -->
 
   <footer>
     <p>© 2026 Store´s Mike | Si te interesa algún producto, escríbenos directamente por WhatsApp: 55-47-90-91-05 / 55-63-71-92-38</p>
